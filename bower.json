@@ -1,0 +1,30 @@
+{
+  "name": "cdmp-website",
+  "authors": [
+    "Alex Clapperton <Pushedskydiver@users.noreply.github.com>"
+  ],
+  "description": "cdmp group 8 website",
+  "main": "",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "wow": "WOW#~1.1.2",
+    "waypoints": "~4.0.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "skrollr": "~0.6.30",
+    "animate.css": "~3.4.0",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

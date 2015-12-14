@@ -16,15 +16,113 @@
   </head>
   <body>
 
-    <header class="">
+    <div class="home-section scrollme parallax-window" data-parallax="scroll" data-image-src="images/bg.jpg">
+      <div class="overlay"></div>
+      <header>
+        <nav class="nav animated fadeInDown">
+          <div class="container">
+            <div class="row">
+              <div class="col col15">
+                <div class="logo">
+                  <a href="#home"><img src="images/logo.png" alt="Group 8 logo" /></a>
+                </div>
+              </div>
 
-    </header>
+              <!-- START: Mobile Nav -->
+              <div class="trigger-nav">
+    						<div class="inner">
+    							<span class="icon-bar top"></span>
+    							<span class="icon-bar middle"></span>
+    							<span class="icon-bar bottom"></span>
+    						</div>
+    					</div>
+              <!-- END: Mobile Nav -->
+
+              <div class="col col85">
+                <div class="main-nav">
+                  <ul>
+                    <li class="active"><a href="index.html">Home</a></li
+                    ><li><a href="#">Project Jounrey</a></li
+                    ><li><a href="#">Research Findings</a></li
+                    ><li><a href="#">Capturing Sound</a></li
+                    ><li><a href="#">Filming The Project</a></li
+                    ><li><a href="#">Framing The Story</a></li
+                    ><li><a href="#">Film &amp; Critique</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!--******************** MAIN CONTENT : Start ********************-->
+      <div class="animateme dark-bg" data-when="exit" data-from="0" data-to="0.7" data-easing="easeinout" data-opacity="0" data-translatey="-200">
+        <main class="main-home" role="main">
+          <div class="home-content">
+            <!-- START: Container -->
+            <div class="container">
+              <!-- START: Row -->
+              <div class="row">
+                <!-- START: Intro Column -->
+                <div class="col col50">
+                  <h1 class="wow animated fadeInLeft" data-wow-delay=".5s">Manchester Bombing 20 Years On</h1>
+                  <p class="home-desc wow animated fadeInLeft" data-wow-delay=".9s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <!-- START: Read More button -->
+                  <div class="read-more-home wow animated fadeInLeft" data-wow-delay="1.3s">
+                    <a href="#content">Start Scrolling</a>
+                  </div>
+                  <!-- END: Read More -->
+                </div>
+                <!-- END: Intro Column -->
+              </div>
+              <!-- END: Row -->
+            </div>
+            <!-- END: Container -->
+          </div>
+        </main>
+      </div>
+      <!--******************** MAIN CONTENT : End ********************-->
+    </div>
+
+
+    <section id="content" class="content">
+      <div class="info-blocks">
+        <div class="info-block">
+          <div class="container">
+            <div class="row">
+              <div class="col col50">
+                <div class="block-container">
+                  <div class="block-icon"><i class="fa fa-bullhorn"></i></div>
+                  <div class="block-content">
+                    <h2>Welcome to Mexico template</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col50 border-left">
+                <div class="block-container">
+                  <div class="block-icon"><i class="fa fa-bullhorn"></i></div>
+                  <div class="block-content">
+                    <h2>Responsive multipurpose template</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="corner-tip-down"></div>
+      </div>
+    </section>
 
     <!-- JS SCRIPTS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/skrollr.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.scrollme.min.js"></script>
     <script src="js/script.js"></script>
     <script>new WOW().init();</script>
   </body>

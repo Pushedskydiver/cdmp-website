@@ -32,18 +32,17 @@ $(function() {
 
 $(function() {
     //caches a jQuery object containing the header element
-    var header = $('header');
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        var nav = $('.nav');
+        var header = $('header');
 
         if (scroll > 50) {
-                nav.addClass('dark').fadeIn(1000);
+                header.addClass('dark').fadeIn(1000);
 
             }
           else {
             if (scroll != 0) {
-            nav.removeClass('dark').fadeIn(500);
+            header.removeClass('dark').fadeIn(500);
           }
         }
 
@@ -62,14 +61,14 @@ $(function() {
 
   $(window).resize(function(){
 
-    if ($(window).width() > 700) {
+    if ($(window).width() >= 980) {
       $('.trigger-nav').css('display', 'none');
       $('.main-nav').css('display', 'block');
 
       if ($('.trigger-nav').hasClass('open-nav')) {
         $('.trigger-nav').removeClass('open-nav');
       }
-    } else if ($(window).width() < 700) {
+    } else if ($(window).width() < 980) {
       $('.trigger-nav').css('display', 'block');
       $('.main-nav').css('display', 'none');
     }
@@ -88,14 +87,29 @@ $(function() {
 
   });
 
-  $(window).bind('scroll', function() {
+  $(window).bind('resize', function() {
 
-    if ($('.trigger-nav').hasClass('open-nav')) {
-      $('.trigger-nav').removeClass('open-nav');
-      toggleNav(false);
-    }
+				if ($(window).width() >= 980) {
+					$('.trigger-nav').css('display', 'none');
+					$('.main-nav').css('display', 'block');
 
-  });
+					if ($('.trigger-nav').hasClass('open-nav')) {
+						$('.trigger-nav').removeClass('open-nav');
+					}
+				} else {
+					$('.trigger-nav').css('display', 'block');
+					$('.main-nav').css('display', 'none');
+				}
+
+			});
+
+			$(window).bind('scroll', function() {
+
+				if ($('.trigger-nav').hasClass('open-nav')) {
+					$('.main-nav').css('display', 'block');
+				}
+
+			});
 
   function toggleNav(bool) {
 
@@ -108,6 +122,23 @@ $(function() {
 
 //------------------------------------- END: Mobile navigation setup ------------------------------------------------//
 
+
+
+
+
+//------------------------------------- START: Footer Twitter setup ------------------------------------------------//
+
+$(window).load(function()
+{
+// Define the style variables
+var $text_color = "#9a9a9a";
+var $name_color = "#9a9a9a";
+
+// Apply the styles
+$("iframe").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .thm-dark .retweet-credit,.h-feed, .stats strong{color:' + $text_color + ' !important; font-size: 1em !important; font-weight: 200 !important; font-family: "Kanit", sans-serif !important;}.var-borderless, .var-borderless .customisable-border{padding-left: 0 !important; padding-top: 0 !important;}.header .avatar{display:none !important;}span.p-nickname, .p-nickname b{font-size: 1.1em !important; font-weight: 600 !important; color: #b3b3b3 !important;}.var-chromeless .permalink, .footer, .env-narrow .header .p-name{display: none !important;}.env-narrow .tweet .header{padding-left: 0 !important;}.env-narrow .var-chromeless .tweet, .env-narrow.var-chromeless .tweet{padding-bottom: 0 !important;}.env-narrow .header .p-nickname{line-height: normal !important;}.p-name{color:'+$name_color+' !important; font-family: "Kanit", sans-serif !important; display: none;}</style>');
+});
+
+//------------------------------------- END: Footer Twitter setup ------------------------------------------------//
 
 
 

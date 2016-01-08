@@ -49,6 +49,11 @@ ol, ul {
   list-style: none;
 }
 
+ol > li:before {
+  content: counter(point) ". " ' ';
+  counter-increment: point 1;
+}
+
 h1, h2, h3, h4, h5 {
   position: relative;
   width: auto;
@@ -84,7 +89,9 @@ h4 {
 }
 
 p {
-  margin-bottom: 20px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 1.5;
 }
 
@@ -107,6 +114,10 @@ hr {
 
 hr.hr-nobg {
   border-color: transparent;
+}
+
+iframe.video {
+  margin-bottom: 20px;
 }
 
 nav:before, nav:after, .logo:before, .logo:after, .main-nav:before,
@@ -280,6 +291,34 @@ nav:after, .logo:after, .row:after, .clearfix:after, .container-fluid:after,
 
 .col15 {
   width: 15%;
+}
+
+.col10 {
+  width: 10%;
+}
+
+.animateme.dark-bg {
+  height: 100%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.light-p {
+  font-weight: 300;
+}
+
+.content-title:after {
+  bottom: -5%;
+}
+
+.content-subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #444;
+  margin-top: -5px;
 }
 
 .parallax-window {
@@ -473,6 +512,16 @@ header.dark .trigger-nav {
   transform: rotate(-45deg);
 }
 
+.home-section-alt {
+  position: relative;
+  height: 40% !important;
+}
+
+main.main-home-alt {
+  height: 100% !important;
+  text-align: center;
+}
+
 main.main-home {
   position: absolute;
   color: #2c2c2c;
@@ -491,6 +540,26 @@ main.main-home .home-content {
 
 main.main-home .home-content h1, main.main-home .home-content p {
   color: #f3f3f3;
+}
+
+main.main-home .home-content h1.title-lg {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+  word-spacing: 0.5rem;
+}
+
+main.main-home .home-content h1.title-lg:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: #da3636;
 }
 
 main.main-home .home-content p {
@@ -577,6 +646,106 @@ section.content .info-blocks p {
 .content-info {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.breadcrumbs-block {
+  position: relative;
+  height: 85px;
+  background-color: #f5f5f5;
+  line-height: 30px;
+}
+
+.breadcrumbs-block .divider {
+  width: 1px;
+  height: 30px;
+  background-color: #d9d9d9;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 0;
+  margin: 0 20px;
+  }
+
+.breadcrumbs-block .table-div {
+  display: table;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.breadcrumbs-block .cell-div {
+  display: table-cell;
+  height: 85px;
+  vertical-align: middle;
+  float: none;
+}
+
+.breadcrumbs-block .cell-div .fa {
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: #000;
+  margin-right: 10px;
+}
+
+.breadcrumbs-block h1 {
+  font-size: 1.4rem;
+  line-height: 30px;
+  margin: 0;
+  margin-top: -3px;
+  color: #000;
+  font-weight: 400;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.breadcrumbs-block .subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 30px;
+  color: #999;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.breadcrumb {
+  list-style: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+  line-height: 28px;
+  color: #999;
+  vertical-align: middle;
+}
+
+.breadcrumb > li:before {
+  content: '';
+}
+
+.breadcrumb > li > a {
+  color: #999;
+  border: 0;
+  font-weight: 400;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.breadcrumb > li.active {
+  color: #999;
+}
+
+.breadcrumb > li + li:before {
+  vertical-align: middle;
+}
+
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #ccc;
 }
 
 .team-block .col {
@@ -967,6 +1136,54 @@ footer .twitter-feed {
 }
 
 @media (max-width: 767px) {
+  main.main-home .home-content h1.title-lg {
+    font-size: 2.5rem;
+  }
+
+  main.main-home .home-content h1.title-lg:after {
+    width: 70%;
+  }
+
+  h2.content-title {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .breadcrumbs-block {
+    height: auto !important;
+  }
+
+  .breadcrumbs-block .table-div {
+    display: block;
+    text-align: center;
+  }
+
+  .breadcrumbs-block .cell-div {
+    width: 100%;
+    height: auto!important;
+    padding: 0 0 15px;
+    padding-top: 15px;
+    text-align: center;
+    display: block;
+  }
+
+  .breadcrumbs-block .cell-div .fa {
+    display: block;
+    margin: auto;
+  }
+
+  .breadcrumbs-block .divider {
+    display: none;
+  }
+
+  .breadcrumbs-block .subtitle {
+    display: block;
+    margin: auto;
+  }
+
   footer .footer-main {
     padding: 30px 0;
   }
